@@ -6,16 +6,16 @@
   }
   
   :root {
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
-    --secondary: #1e40af;
-    --white: #ffffff;
+    --azul: #2563eb;
+    --azul-medio: #1d4ed8;
+    --azul-escuro: #1e40af;
+    --branco: #ffffff;
     --gray-50: #f9fafb;
     --gray-100: #f3f4f6;
     --gray-200: #e5e7eb;
     --gray-700: #fff;
     --gray-800: #fff;
-    --gray-900: #111827;
+    --gray-900: #fff;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -61,7 +61,7 @@
   .logo {
     font-size: 1.75rem;
     font-weight: bold;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.5px;
@@ -261,7 +261,7 @@
   
   .section-header p {
     font-size: 1.2rem;
-    color: var(--gray-700);
+    color: #fff;
     line-height: 1.7;
   }
   
@@ -357,57 +357,6 @@
   .photo-item:hover .photo-overlay {
     transform: translateY(0);
   }
-  
-  /*Appointment Form
-  .appointment {
-    padding: 100px 0;
-    background-color: var(--white);
-    background-image: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(30, 64, 175, 0.1));
-  }
-  
-  .appointment-form {
-    max-width: 700px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 3rem;
-    border-radius: 2rem;
-    box-shadow: var(--shadow-lg);
-  }
-  
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-  
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 0.75rem;
-    color: var(--gray-700);
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-  
-  input,
-  select {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid var(--gray-200);
-    border-radius: 0.75rem;
-    font-size: 1rem;
-    transition: all 0.3s;
-  }
-  
-  input:focus,
-  select:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-  }*/
   
   .agendamento {
     padding: 50px;
@@ -552,9 +501,9 @@
         top: 80px;
         left: 0;
         right: 0;
-        background: var(--white);
+        background: linear-gradient(100deg, #000000, #50504F);
         flex-direction: column;
-        padding: 1.5rem;
+        padding: 1rem;
         gap: 1.5rem;
         box-shadow: var(--shadow);
     }
@@ -575,6 +524,48 @@
   
     .hero-text p {
         font-size: 1.25rem;
+    }
+
+    .hero-image {
+      background: linear-gradient(100deg, #000000, #50504F);
+      border-radius: 110px;
+      width: 300px;
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      color: #fff;
+      line-height: 1.7;
+    }
+    
+    .btn a{
+      background-color:#128C7E;
+      display: inline-block;
+      padding: 1rem;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 99px;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+   
+    .whatsapp{
+      background-color:#128C7E;
+      display: inline-block;
+      padding: 2rem 2rem;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      box-shadow: var(--shadow);
+    }
+    
+    .whatsapp:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      background-color: #128C7E;
     }
   
     .form-row {
