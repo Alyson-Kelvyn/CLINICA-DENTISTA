@@ -180,9 +180,9 @@
     transition: transform 0.3s ease;
   }
   
-  /* .hero-image:hover img {
+  .hero-image:hover img {
     transform: scale(1.02);
-  } */
+  }
   
   /* Buttons */
   .btn {
@@ -239,7 +239,8 @@
   /* Procedures Section */
   .procedures {
     padding: 100px 0;
-    background: linear-gradient(100deg, #000000, #50504F);
+    background-color: #000;
+    background: linear-gradient(to right, #000000, #50504F);
   }
   
   .section-header {
@@ -272,7 +273,7 @@
   }
   
   .procedure-card {
-    background: var(--white);
+    background: linear-gradient(100deg, #000000,rgb(44, 44, 43));
     border-radius: 1.5rem;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -296,19 +297,23 @@
   }
   
   .procedure-content {
-    padding: 2rem;
+    padding: 1.5rem;
   }
   
   .procedure-card h3 {
-    font-size: 1.5rem;
+    text-align: center;
+    font-size: 1.9rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: black;
+    color: #fff;
   }
   
   .procedure-card p {
-    color: black;
-    line-height: 1.7;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.5;
   }
   
   /* Clinic Photos */
