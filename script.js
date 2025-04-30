@@ -32,50 +32,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form Submission with Validation
-const appointmentForm = document.getElementById('appointment-form');
-
-appointmentForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Basic form validation
-    const formData = {
-        name: document.getElementById('name').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        phone: document.getElementById('phone').value.trim(),
-        procedure: document.getElementById('procedure').value,
-        date: document.getElementById('date').value,
-        time: document.getElementById('time').value
-    };
-
-    // Validate required fields
-    for (let field in formData) {
-        if (!formData[field]) {
-            alert('Por favor, preencha todos os campos obrigatórios.');
-            return;
-        }
-    }
-
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-        alert('Por favor, insira um email válido.');
-        return;
-    }
-
-    // Validate phone format (Brazilian format)
-    const phoneRegex = /^\(?[1-9]{2}\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$/;
-    if (!phoneRegex.test(formData.phone)) {
-        alert('Por favor, insira um número de telefone válido.');
-        return;
-    }
-
-    // Here you would typically send the data to a server
-    console.log('Appointment Data:', formData);
-    alert('Agendamento recebido! Entraremos em contato em breve.');
-    appointmentForm.reset();
-});
-
 // Animate Elements on Scroll
 const observerOptions = {
     threshold: 0.1,
@@ -97,12 +53,28 @@ document.querySelectorAll('.procedure-card, .photo-item, .section-header').forEa
     observer.observe(el);
 });
 
-// Initialize current date for appointment form
-const dateInput = document.getElementById('date');
-if (dateInput) {
-    const today = new Date();
-    const yyyy = today.getFullYear();
-    const mm = String(today.getMonth() + 1).padStart(2, '0');
-    const dd = String(today.getDate()).padStart(2, '0');
-    dateInput.min = `${yyyy}-${mm}-${dd}`;
-}
+// Form Validation and WhatsApp Integration
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
+
+    if (name && phone && service) {
+        let whatsappMessage = `Olá, meu nome é ${name}.\n`;
+        whatsappMessage += `Gostaria de solicitar um orçamento para: ${service}\n`;
+        if (message) {
+            whatsappMessage += `Mensagem adicional: ${message}`;
+        }
+
+        const whatsappUrl = `https://wa.me/5585994015283?text=${encodeURIComponent(whatsappMessage)}`;
+        window.open(whatsappUrl, '_blank');
+        contactForm.reset();
+    } else {
+        alert('Por favor, preencha os campos obrigatórios.');
+    }
+});
