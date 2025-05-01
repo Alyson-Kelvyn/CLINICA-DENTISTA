@@ -6,26 +6,18 @@
   }
   
   :root {
-    --azul: #2563eb;
-    --azul-medio: #1d4ed8;
-    --azul-escuro: #1e40af;
-    --branco: #ffffff;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-700: #fff;
-    --gray-800: #fff;
-    --gray-900: #fff;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --degrade1: linear-gradient( to right, #020114, #2017c2);
+    --degrade2: linear-gradient( to bottom, #000000, #1c13d0);
+    --degrade3: linear-gradient( to right, #000000, #414042);
+    --degrade4: linear-gradient( to left, #000000, #2c27da);
+    --degrade5: linear-gradient( to bottom, #fbfbfd, #636262);
   }
   
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
-    color: var(--gray-800);
-    background-color: var(--gray-50);
+    color: #fff;
+    background: var(--degrade1);
   }
   
   .container {
@@ -36,9 +28,9 @@
   
   /* Navigation */
   .navbar {
-    background: linear-gradient(135deg, #000000, #50504F);
+    background: var(--degrade2);
     backdrop-filter: blur(10px);
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -48,7 +40,7 @@
   
   .navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.95);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
   
   .navbar .container {
@@ -61,7 +53,7 @@
   .logo {
     font-size: 1.75rem;
     font-weight: bold;
-    background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+    background: var(--degrade5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.5px;
@@ -89,12 +81,12 @@
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: var(--primary);
+    background-color: #2563eb;
     transition: width 0.3s ease;
   }
   
   .nav-links a:hover {
-    color: var(--primary);
+    color: #2563eb;
   }
   
   .nav-links a:hover::after {
@@ -112,16 +104,16 @@
   .bar {
     width: 28px;
     height: 2px;
-    background-color: var(--gray-800);
+    background-color: #fff;
     transition: 0.3s;
   }
   
   /* Hero Section */
   .hero {
-    padding: 160px 0 120px;
-    background: linear-gradient(135deg, #000000, #50504F);
+    padding: 100px 0 12px;
     position: relative;
     overflow: hidden;
+    background: var(--degrade3)
   }
   
   .hero::before {
@@ -135,6 +127,14 @@
     opacity: 0.3;
   }
   
+  .nome {
+    text-align: center;
+    max-width: 100%;
+    background: var(--degrade4);
+    border-radius: 50px;
+    padding: 10px;
+  }
+  
   .hero-content {
     position: relative;
     display: flex;
@@ -145,13 +145,13 @@
   h3{
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--white);
+    color: #fff;
     margin-bottom: 1rem;
   }
   
   .hero-text {
     flex: 1;
-    color: var(--white);
+    color: #fff;
   }
   
   .hero-text h1 {
@@ -175,13 +175,12 @@
   
   .hero-image img {
     width: 100%;
-    border-radius: 2rem;
-    box-shadow: var(--shadow-lg);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
+    transform: scale(1.03);
   }
   
   .hero-image:hover img {
-    transform: scale(1.02);
+    transform: scale(1.03);
   }
   
   /* Buttons */
@@ -195,26 +194,26 @@
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
   
   .whatsapp:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     background-color: #128C7E;
   }
   
   /* Procedures Section */
   .procedures {
     padding: 100px 0;
-    background-color: #000;
-    background: linear-gradient(to right, #000000, #50504F);
   }
   
-  .section-header {
+  .section-header{
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto 4rem;
+    max-width: 100%;
+    background: var(--degrade2);
+    border-radius: 50px 50px 0px 0px;
+    padding: 20px;
   }
   
   .procedures h2,
@@ -241,16 +240,16 @@
   }
   
   .procedure-card {
-    background: linear-gradient(to bottom, #000000, #2c2c2b);
+    background: linear-gradient( to bottom, #020114, #2d23ed);
     border-radius: 1.5rem;
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
   }
   
   .procedure-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
   
   .procedure-card img {
@@ -287,7 +286,6 @@
   /* Clinic Photos */
   .clinic-photos {
     padding: 100px 0;
-    background: linear-gradient(to right, #000000, #50504F)
   }
   
   .photos-grid {
@@ -300,7 +298,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 1.5rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     aspect-ratio: 4/3;
   }
   
@@ -322,7 +320,7 @@
     right: 0;
     padding: 2rem;
     background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    color: white;
+    color: #fff;
     transform: translateY(100%);
     transition: transform 0.3s ease;
   }
@@ -334,19 +332,19 @@
 /* Contact Section */
 .contact {
   padding: 5rem 1rem;
-  background: linear-gradient(to right, #000000, #50504F)
 }
 
 .contact h2 {
   text-align: center;
-  margin-bottom: 2rem;
-  color: #fff;
+  max-width: 100%;
+  background: linear-gradient( to right, #000000,#1c13d0);
+  border-radius: 50px 50px 0px 0px;
+  padding: 20px;
 }
 
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
-  background: linear-gradient(to bottom,rgb(0, 0, 0),rgb(66, 66, 63));
   backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 10px;
@@ -404,7 +402,7 @@
 
 .submit-btn {
   background-color:  #128C7E;
-  color: var(--white);
+  color: #fff;
   padding: 1rem 2rem;
   border: none;
   border-radius: 50px;
@@ -431,24 +429,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(100deg, #000000, #50504F)
   }
   
   /* Map Section */
-  .map {
-    background: linear-gradient(100deg, #000000, #50504F)
-  }
-  
+
   .map-container {
     border-radius: 2rem;
     overflow: hidden;
-    box-shadow: white;
+    box-shadow: #fff;
   }
   
   /* Footer */
   .footer {
     background-color: black;
-    color: var(--white);
+    color: #fff;
     padding: 80px 0 30px;
     position: relative;
     overflow: hidden;
@@ -487,7 +481,7 @@
     left: 0;
     width: 40px;
     height: 2px;
-    background-color: var(--primary);
+    background-color: #2563eb;
   }
   
   .footer-section p {
@@ -504,7 +498,7 @@
   }
   
   .social-link {
-    color: var(--white);
+    color: #fff;
     text-decoration: none;
     transition: all 0.3s;
     opacity: 0.9;
@@ -512,7 +506,7 @@
   }
   
   .social-link:hover {
-    color: var(--white);
+    color: #fff;
     opacity: 1;
     transform: translateY(-2px);
   }
@@ -569,11 +563,11 @@
         top: 80px;
         left: 0;
         right: 0;
-        background: linear-gradient(100deg, #000000, #50504F);
+        background: linear-gradient( to left, #020114, #2d23ed);
         flex-direction: column;
         padding: 1rem;
         gap: 1.5rem;
-        box-shadow: var(--shadow);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
   
     .nav-links.active {
@@ -621,12 +615,12 @@
       font-weight: 600;
       font-size: 1.1rem;
       transition: all 0.3s;
-      box-shadow: var(--shadow);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
     
     .whatsapp:hover {
       transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
       background-color: #128C7E;
     }
   
