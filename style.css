@@ -51,7 +51,7 @@
   }
   
   .logo {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: bold;
     background: var(--degrade5);
     -webkit-background-clip: text;
@@ -131,7 +131,7 @@
     text-align: center;
     max-width: 100%;
     background: var(--degrade4);
-    border-radius: 50px;
+    border-radius: 5px;
     padding: 10px;
   }
   
@@ -174,12 +174,8 @@
   }
   
   .hero-image img {
-    width: 100%;
+    width: 500px;
     transition: transform 0.2s ease;
-    transform: scale(1.03);
-  }
-  
-  .hero-image:hover img {
     transform: scale(1.03);
   }
   
@@ -213,7 +209,7 @@
     max-width: 100%;
     background: var(--degrade2);
     border-radius: 50px 50px 0px 0px;
-    padding: 20px;
+    padding: 10px;
   }
   
   .procedures h2,
@@ -228,7 +224,7 @@
   }
   
   .section-header p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #fff;
     line-height: 1.7;
   }
@@ -240,7 +236,7 @@
   }
   
   .procedure-card {
-    background: linear-gradient( to bottom, #020114, #2d23ed);
+    background: var(--degrade2);
     border-radius: 1.5rem;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -254,7 +250,7 @@
   
   .procedure-card img {
     width: 100%;
-    height: 240px;
+    height: 200px;
     object-fit: cover;
     transition: transform 0.3s ease;
   }
@@ -269,7 +265,7 @@
   
   .procedure-card h3 {
     text-align: center;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: #fff;
@@ -277,7 +273,7 @@
   
   .procedure-card p {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #fff;
     line-height: 1.5;
